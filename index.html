@@ -55,12 +55,12 @@
         </div>
 
         <!-- card & history container -->
-         <div class="main-container">
+         <div class="main-container flex justify-between">
 
             <!-- card -->
-             <div class="card-container grid gap-5 grid-cols-3">
+             <div class="card-container grid gap-[30px] grid-cols-3 py-[48px]">
                 
-                <div class="card w-[400px] bg-white p-[20px]">
+                <div class="card bg-white p-[20px]">
 
                    <!-- icons -->
                     <div class="icon flex items-center justify-between mb-[16px]">
@@ -83,31 +83,7 @@
                     </div>
                 </div>
 
-                   <div class="card w-[400px] bg-white p-[20px]">
-
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
-                    </div>
-
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
-                    </div>
-
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
-                </div>
-
-
-                                <div class="card w-[400px] bg-white p-[20px]">
+                   <div class="card bg-white p-[20px]">
 
                    <!-- icons -->
                     <div class="icon flex items-center justify-between mb-[16px]">
@@ -131,7 +107,7 @@
                 </div>
 
 
-                                <div class="card w-[400px] bg-white p-[20px]">
+                                <div class="card bg-white p-[20px]">
 
                    <!-- icons -->
                     <div class="icon flex items-center justify-between mb-[16px]">
@@ -155,7 +131,7 @@
                 </div>
 
 
-                                <div class="card w-[400px] bg-white p-[20px]">
+                                <div class="card bg-white p-[20px]">
 
                    <!-- icons -->
                     <div class="icon flex items-center justify-between mb-[16px]">
@@ -179,7 +155,7 @@
                 </div>
 
 
-                                <div class="card w-[400px] bg-white p-[20px]">
+                                <div class="card bg-white p-[20px]">
 
                    <!-- icons -->
                     <div class="icon flex items-center justify-between mb-[16px]">
@@ -203,7 +179,7 @@
                 </div>
 
 
-                                <div class="card w-[400px] bg-white p-[20px]">
+                                <div class="card bg-white p-[20px]">
 
                    <!-- icons -->
                     <div class="icon flex items-center justify-between mb-[16px]">
@@ -227,7 +203,7 @@
                 </div>
 
 
-                                <div class="card w-[400px] bg-white p-[20px]">
+                                <div class="card bg-white p-[20px]">
 
                    <!-- icons -->
                     <div class="icon flex items-center justify-between mb-[16px]">
@@ -251,7 +227,31 @@
                 </div>
 
 
-                                <div class="card w-[400px] bg-white p-[20px]">
+                                <div class="card bg-white p-[20px]">
+
+                   <!-- icons -->
+                    <div class="icon flex items-center justify-between mb-[16px]">
+                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
+                        <i class="ri-heart-line text-[30px] "></i>
+                    </div>
+
+                    <!-- title -->
+                    <div class="tile">
+                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
+                        <p class="roboto font-normal text-[18px]">National Emergency</p>
+                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
+                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
+                    </div>
+
+                    <!-- buttons -->
+                    <div class="buttons mt-[24px] pb-[6px]">
+                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
+                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
+                    </div>
+                </div>
+
+
+                                <div class="card bg-white p-[20px]">
 
                    <!-- icons -->
                     <div class="icon flex items-center justify-between mb-[16px]">
@@ -277,9 +277,16 @@
              </div>
 
              <!-- history -->
-              <div class="history">
-
+              <div class="history-container">
+                <div class="history bg-white h-full py-[30px]">
+                    <div class="title-section flex justify-between items-center w-[85%] mx-auto">
+                        <h1 class="roboto font-medium text-[20px]"><i class="ri-history-line text-[25px]"></i>  Call History</h1>
+                        <button class="px-[36px] py-[12px] rounded-[50px] bg-[#00A63E] text-white">Clear</button>
+                    </div>
+                </div>
               </div>
+
+
          </div>
     </main>
 </body>
