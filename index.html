@@ -17,277 +17,307 @@
         <link rel="stylesheet" href="./tailwind.css">
 </head>
 <body>
-    <nav class="w-full h-[100px] flex items-center px-8 justify-between">
+    <nav class="w-full h-[100px] flex items-center lg:px-8 px-3.5 justify-between">
         <!-- logo section -->
         <div class="logo-title flex items-center">
             <div>
-                <img class="w-[50px]" src="./assets/logo.png" alt="">
+                <img class="lg:w-[50px] w-[50px]" src="./assets/logo.png" alt="">
             </div>
-            <h1 class="hindu font-bold text-[#006747] text-[23px] w-[50px] leading-7 pl-2">EMERGENCY HELPLINE</h1>
+            <h1 class="hindu font-bold text-[#006747] lg:text-[23px] text-[16px] w-[50px] leading-7 pl-2">EMERGENCY HELPLINE</h1>
         </div>
 
 <!-- activity section -->
-        <div class="activity-section flex gap-3.5">
-
-            <div class="heart flex items-center w-[123px] bg-[#41ff6a33] h-[50px] rounded-[50px] justify-center gap-1">
-                <h1 class="text-[18px] font-bold">0</h1>
-                <i class="ri-heart-fill text-[#ED1C24] text-[25px]"></i>
+        <div class="activity-section flex lg:gap-3.5 gap-1.5">
+<!-- heart -->
+            <div class="flex items-center md:w-[123px] w-[70px] bg-[#41ff6a33] lg:h-[50px] h-[30px] rounded-[50px] justify-center gap-1">
+                <h1 id="heart-counter" class="lg:text-[18px] text-[14px] font-bold">0</h1>
+                <i class="ri-heart-fill text-[#ED1C24] lg:text-[25px] text-[20px]"></i>
             </div>
-
-            <div class="heart flex items-center w-[123px] bg-[#41ff6a33] h-[50px] rounded-[50px] justify-center gap-1">
-                <h1 class="text-[18px] font-bold">100</h1>
-                <i class="ri-copper-coin-fill text-[#ffcd04] text-[25px]"></i>
+<!-- coin -->
+            <div class="flex items-center lg:w-[123px] w-[70px] bg-[#41ff6a33] lg:h-[50px] h-[30px] rounded-[50px] justify-center gap-1">
+                <h1 id="coin-counter" class="lg:text-[18px] text-[14px] font-bold">100</h1>
+                <i class="ri-copper-coin-fill text-[20px] text-[#ffcd04] lg:text-[25px]"></i>
             </div>
-
-            <div class="heart flex items-center w-[123px] bg-[#00A63E] h-[50px] rounded-[50px] justify-center gap-1">
-                <h1 class="text-[18px] font-bold text-white "><span>0</span>  Copy</h1>
+<!-- copy -->
+            <div class="flex items-center lg:w-[123px] w-[70px] bg-[#00A63E] lg:h-[50px] h-[30px] rounded-[50px] justify-center gap-1">
+                <h1 class="lg:text-[18px] text-[14px] font-bold text-white "><span id="copy-counter">0</span>  Copy</h1>
             </div>
         </div>
     </nav>
 
-    <main class="bg-[#e7fcea] h-full">
+    <main class="bg-[#ebffee] h-full">
 
 <!-- banner -->
         <div class="banner text-center bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-white py-[16px] grid gap-3">
-                <img class="w-[92px] mx-auto" src="./assets/logo-dark.png" alt="">
-            <h1 class="text-[40px] font-bold hindu">Emergency Service Directory</h1>
-            <p class="text-[20px] font-medium hindu">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
+                <img class="lg:w-[92px] w-[75px] mx-auto" src="./assets/logo-dark.png" alt="">
+            <h1 class="lg:text-[40px] text-[20px] font-bold hindu">Emergency Service Directory</h1>
+            <p class="lg:text-[20px] text-[10px] font-medium hindu">Government Emergency Services at Your Fingertip – A Project by  Government of the People’s Republic of Bangladesh</p>
         </div>
 
-        <!-- card & history container -->
-         <div class="main-container flex justify-between">
+        <!-- card history container -->
+         <div class="card-history-container mx-7 lg:mx-10 py-9 lg:flex justify-between pb-16">
 
             <!-- card -->
-             <div class="card-container grid gap-[30px] grid-cols-3 py-[48px]">
-                
-                <div class="card bg-white p-[20px]">
+             <div class="card-container grid md:grid-cols-2 lg:grid-cols-3 lg:gap-16 gap-12 lg:mb-0 mb-8">
 
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
+                <div class="card shadow-lg bg-white p-5 w-100 rounded-[12px]">
+<!-- icon -->
+                    <div class="icon flex items-center justify-between">
+                    <div class="p-3 bg-[#FFE3E2] w-[60px] rounded-2xl">
+                        <img  src="./assets/emergency.png" alt="">
                     </div>
+                    <i id="heart-btn" class="heart-button ri-heart-line text-3xl"></i>    
+                    </div>
+<!-- title -->
+                     <div class="title pt-4">
+                        <h2 id="t1" class=" hindu font-bold text-2xl">National Emergency Number</h2>
+                        <p class="roboto font-normal text-gray-400">National Emergency</p>
+                        <h1 id="caller-id-1" class="text-to-copy roboto font-bold text-3xl mt-5 pb-1.5">999</h1>
+                        <p class="hindu font-normal text-xl bg-[#F2F2F2] px-4 py-1.5 inline-block rounded-3xl text-gray-500">All</p>
+                     </div>
+<!-- button -->
+                     <div class="buttons flex gap-3.5 justify-center mt-[24px]">
+                        <button class="btn bg-white border-1 border-gray-400 px-[16%] roboto font-normal text-[16px] rounded-[8px]
+                        copy-btn">
+                            <i class="ri-file-copy-line"></i>Copy
+                        </button>
+                        <button id="call-btn" class="btn bg-[#00A63E] text-white px-[16%] roboto font-normal text-[16px] border-none rounded-[8px]">
+                            <i class="ri-phone-line"></i>Call
+                        </button>
+                     </div>
 
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
-                    </div>
-
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
                 </div>
-
-                   <div class="card bg-white p-[20px]">
-
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
+                <div class="card shadow-lg bg-white p-5 w-100 rounded-[12px]">
+<!-- icon -->
+                    <div class="icon flex items-center justify-between">
+                    <div class="p-3 bg-[#FFE3E2] w-[60px] rounded-2xl">
+                        <img  src="./assets/police.png" alt="">
                     </div>
-
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
+                    <i id="heart-btn" class="heart-button ri-heart-line text-3xl"></i>    
                     </div>
+<!-- title -->
+                     <div class="title pt-4">
+                        <h2 id="t2" class=" hindu font-bold text-2xl">Police Helpline Number</h2>
+                        <p class="roboto font-normal text-gray-400">Police</p>
+                        <h1 id="caller-id-2" class="text-to-copy roboto font-bold text-3xl mt-5 pb-1.5">999</h1>
+                        <p class="hindu font-normal text-xl bg-[#F2F2F2] px-4 py-1.5 inline-block rounded-3xl text-gray-500">Police</p>
+                     </div>
+<!-- button -->
+                     <div class="buttons flex gap-3.5 justify-center mt-[24px]">
+                        <button class="btn bg-white border-1 border-gray-400 px-[16%] roboto font-normal text-[16px] rounded-[8px]
+                        copy-btn">
+                            <i class="ri-file-copy-line"></i>Copy
+                        </button>
+                        <button id="call-btn-2" class="btn bg-[#00A63E] text-white px-[16%] roboto font-normal text-[16px] border-none rounded-[8px]">
+                            <i class="ri-phone-line"></i>Call
+                        </button>
+                     </div>
 
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
                 </div>
-
-
-                                <div class="card bg-white p-[20px]">
-
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
+                <div class="card shadow-lg bg-white p-5 w-100 rounded-[12px]">
+<!-- icon -->
+                    <div class="icon flex items-center justify-between">
+                    <div class="p-3 bg-[#FFE3E2] w-[60px] rounded-2xl">
+                        <img  src="./assets/fire-service.png" alt="">
                     </div>
-
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
+                    <i id="heart-btn" class="heart-button ri-heart-line text-3xl"></i>    
                     </div>
+<!-- title -->
+                     <div class="title pt-4">
+                        <h2 id="t3" class=" hindu font-bold text-2xl">Fire Service Number</h2>
+                        <p class="roboto font-normal text-gray-400">Fire Service</p>
+                        <h1 id="caller-id-3" class="text-to-copy roboto font-bold text-3xl mt-5 pb-1.5">999</h1>
+                        <p class="hindu font-normal text-xl bg-[#F2F2F2] px-4 py-1.5 inline-block rounded-3xl text-gray-500">Fire</p>
+                     </div>
+<!-- button -->
+                     <div class="buttons flex gap-3.5 justify-center mt-[24px]">
+                        <button class="btn bg-white border-1 border-gray-400 px-[16%] roboto font-normal text-[16px] rounded-[8px]
+                        copy-btn">
+                            <i class="ri-file-copy-line"></i>Copy
+                        </button>
+                        <button id="call-btn-3" class="btn bg-[#00A63E] text-white px-[16%] roboto font-normal text-[16px] border-none rounded-[8px] ">
+                            <i class="ri-phone-line"></i>Call
+                        </button>
+                     </div>
 
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
                 </div>
-
-
-                                <div class="card bg-white p-[20px]">
-
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
+                <div class="card shadow-lg bg-white p-5 w-100 rounded-[12px]">
+<!-- icon -->
+                    <div class="icon flex items-center justify-between">
+                    <div class="p-3 bg-[#FFE3E2] w-[60px] rounded-2xl">
+                        <img  src="./assets/ambulance.png" alt="">
                     </div>
-
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
+                    <i id="heart-btn" class="heart-button ri-heart-line text-3xl"></i>    
                     </div>
+<!-- title -->
+                     <div class="title pt-4">
+                        <h2 id="t4" class=" hindu font-bold text-2xl">Ambulance Service</h2>
+                        <p class="roboto font-normal text-gray-400">National Emergency</p>
+                        <h1 id="caller-id-4" class="text-to-copy roboto font-bold text-3xl mt-5 pb-1.5">1994-999999</h1>
+                        <p class="hindu font-normal text-xl bg-[#F2F2F2] px-4 py-1.5 inline-block rounded-3xl text-gray-500">Health</p>
+                     </div>
+<!-- button -->
+                     <div class="buttons flex gap-3.5 justify-center mt-[24px]">
+                        <button class="btn bg-white border-1 border-gray-400 px-[16%] roboto font-normal text-[16px] rounded-[8px]
+                        copy-btn">
+                            <i class="ri-file-copy-line"></i>Copy
+                        </button>
+                        <button id="call-btn-4" class="btn bg-[#00A63E] text-white px-[16%] roboto font-normal text-[16px] border-none rounded-[8px] ">
+                            <i class="ri-phone-line"></i>Call
+                        </button>
+                     </div>
 
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
                 </div>
-
-
-                                <div class="card bg-white p-[20px]">
-
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
+                <div class="card shadow-lg bg-white p-5 w-100 rounded-[12px]">
+<!-- icon -->
+                    <div class="icon flex items-center justify-between">
+                    <div class="p-3 bg-[#FFE3E2] w-[60px] rounded-2xl">
+                        <img  src="./assets/emergency.png" alt="">
                     </div>
-
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
+                    <i id="heart-btn" class="heart-button ri-heart-line text-3xl"></i>    
                     </div>
+<!-- title -->
+                     <div class="title pt-4">
+                        <h2 id="t5" class=" hindu font-bold text-2xl">Women & Child Helpline</h2>
+                        <p class="roboto font-normal text-gray-400">Women & Child Helpline</p>
+                        <h1 id="caller-id-5" class="text-to-copy roboto font-bold text-3xl mt-5 pb-1.5">109</h1>
+                        <p class="hindu font-normal text-xl bg-[#F2F2F2] px-4 py-1.5 inline-block rounded-3xl text-gray-500">Help</p>
+                     </div>
+<!-- button -->
+                     <div class="buttons flex gap-3.5 justify-center mt-[24px]">
+                        <button class="btn bg-white border-1 border-gray-400 px-[16%] roboto font-normal text-[16px] rounded-[8px]
+                        copy-btn">
+                            <i class="ri-file-copy-line"></i>Copy
+                        </button>
+                        <button id="call-btn-5" class="btn bg-[#00A63E] text-white px-[16%] roboto font-normal text-[16px] border-none rounded-[8px] ">
+                            <i class="ri-phone-line"></i>Call
+                        </button>
+                     </div>
 
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
                 </div>
-
-
-                                <div class="card bg-white p-[20px]">
-
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
+                <div class="card shadow-lg bg-white p-5 w-100 rounded-[12px]">
+<!-- icon -->
+                    <div class="icon flex items-center justify-between">
+                    <div class="p-3 bg-[#FFE3E2] w-[60px] rounded-2xl">
+                        <img  src="./assets/emergency.png" alt="">
                     </div>
-
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
+                    <i id="heart-btn" class="heart-button ri-heart-line text-3xl"></i>    
                     </div>
+<!-- title -->
+                     <div class="title pt-4">
+                        <h2 id="t6" class=" hindu font-bold text-2xl">Anti-Corruption Helpline</h2>
+                        <p class="roboto font-normal text-gray-400">Anti-Corruption</p>
+                        <h1 id="caller-id-6" class="text-to-copy roboto font-bold text-3xl mt-5 pb-1.5">106</h1>
+                        <p class="hindu font-normal text-xl bg-[#F2F2F2] px-4 py-1.5 inline-block rounded-3xl text-gray-500">Govt.</p>
+                     </div>
+<!-- button -->
+                     <div class="buttons flex gap-3.5 justify-center mt-[24px]">
+                        <button class="btn bg-white border-1 border-gray-400 px-[16%] roboto font-normal text-[16px] rounded-[8px]
+                        copy-btn">
+                            <i class="ri-file-copy-line"></i>Copy
+                        </button>
+                        <button id="call-btn-6" class="btn bg-[#00A63E] text-white px-[16%] roboto font-normal text-[16px] border-none rounded-[8px] ">
+                            <i class="ri-phone-line"></i>Call
+                        </button>
+                     </div>
 
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
                 </div>
-
-
-                                <div class="card bg-white p-[20px]">
-
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
+                <div class="card shadow-lg bg-white p-5 w-100 rounded-[12px]">
+<!-- icon -->
+                    <div class="icon flex items-center justify-between">
+                    <div class="p-3 bg-[#FFE3E2] w-[60px] rounded-2xl">
+                        <img  src="./assets/emergency.png" alt="">
                     </div>
-
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
+                    <i id="heart-btn" class="heart-button ri-heart-line text-3xl"></i>    
                     </div>
+<!-- title -->
+                     <div class="title pt-4">
+                        <h2 id="t7" class=" hindu font-bold text-2xl">Electricity Helpline</h2>
+                        <p class="roboto font-normal text-gray-400">Electricity Outage</p>
+                        <h1 id="caller-id-7" class="text-to-copy roboto font-bold text-3xl mt-5 pb-1.5">16216</h1>
+                        <p class="hindu font-normal text-xl bg-[#F2F2F2] px-4 py-1.5 inline-block rounded-3xl text-gray-500">Electricity</p>
+                     </div>
+<!-- button -->
+                     <div class="buttons flex gap-3.5 justify-center mt-[24px]">
+                        <button class="btn bg-white border-1 border-gray-400 px-[16%] roboto font-normal text-[16px] rounded-[8px]
+                        copy-btn">
+                            <i class="ri-file-copy-line"></i>Copy
+                        </button>
+                        <button id="call-btn-7" class="btn bg-[#00A63E] text-white px-[16%] roboto font-normal text-[16px] border-none rounded-[8px] ">
+                            <i class="ri-phone-line"></i>Call
+                        </button>
+                     </div>
 
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
                 </div>
-
-
-                                <div class="card bg-white p-[20px]">
-
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
+                <div class="card shadow-lg bg-white p-5 w-100 rounded-[12px]">
+<!-- icon -->
+                    <div class="icon flex items-center justify-between">
+                    <div class="p-3 bg-[#FFE3E2] w-[60px] rounded-2xl">
+                        <img  src="./assets/brac.png" alt="">
                     </div>
-
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
+                    <i id="heart-btn" class="heart-button ri-heart-line text-3xl"></i>    
                     </div>
+<!-- title -->
+                     <div class="title pt-4">
+                        <h2 id="t8" class=" hindu font-bold text-2xl">Brac Helpline</h2>
+                        <p class="roboto font-normal text-gray-400">Brac</p>
+                        <h1 id="caller-id-8" class="text-to-copy roboto font-bold text-3xl mt-5 pb-1.5">16445</h1>
+                        <p class="hindu font-normal text-xl bg-[#F2F2F2] px-4 py-1.5 inline-block rounded-3xl text-gray-500">NGO</p>
+                     </div>
+<!-- button -->
+                     <div class="buttons flex gap-3.5 justify-center mt-[24px]">
+                        <button class="btn bg-white border-1 border-gray-400 px-[16%] roboto font-normal text-[16px] rounded-[8px]
+                        copy-btn">
+                            <i class="ri-file-copy-line"></i>Copy
+                        </button>
+                        <button id="call-btn-8" class="btn bg-[#00A63E] text-white px-[16%] roboto font-normal text-[16px] border-none rounded-[8px] ">
+                            <i class="ri-phone-line"></i>Call
+                        </button>
+                     </div>
 
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
                 </div>
-
-
-                                <div class="card bg-white p-[20px]">
-
-                   <!-- icons -->
-                    <div class="icon flex items-center justify-between mb-[16px]">
-                        <img class="bg-[#FFE3E2] p-[14px] rounded-[16px] w-[70px]" src="./assets/emergency.png" alt="">
-                        <i class="ri-heart-line text-[30px] "></i>
+                <div class="card shadow-lg bg-white p-5 w-100 rounded-[12px]">
+<!-- icon -->
+                    <div class="icon flex items-center justify-between">
+                    <div class="p-3 bg-[#FFE3E2] w-[60px] rounded-2xl">
+                        <img  src="./assets/Bangladesh-Railway.png" alt="">
                     </div>
-
-                    <!-- title -->
-                    <div class="tile">
-                        <h2 class="hindu font-bold text-[24px]">National Emergency Number</h2>
-                        <p class="roboto font-normal text-[18px]">National Emergency</p>
-                        <h1 class="roboto font-bold text-[32px] pt-[15px]">999</h1>
-                        <p class="px-[16px] py-[6px] bg-[#F2F2F2] inline-block rounded-4xl">All</p>
+                    <i id="heart-btn" class="heart-button ri-heart-line text-3xl"></i>    
                     </div>
+<!-- title -->
+                     <div class="title pt-4">
+                        <h2 id="t9" class=" hindu font-bold text-2xl">Bangladesh Railway Helpline </h2>
+                        <p class="roboto font-normal text-gray-400">Bangladesh Railway</p>
+                        <h1 id="caller-id-9" class="text-to-copy roboto font-bold text-3xl mt-5 pb-1.5">163</h1>
+                        <p class="hindu font-normal text-xl bg-[#F2F2F2] px-4 py-1.5 inline-block rounded-3xl text-gray-500">Travel</p>
+                     </div>
+<!-- button -->
+                     <div id="call-btn-9" class="buttons flex gap-3.5 justify-center mt-[24px]">
+                        <button class="btn bg-white border-1 border-gray-400 px-[16%] roboto font-normal text-[16px] rounded-[8px]">
+                            <i class="ri-file-copy-line"></i>Copy
+                        </button>
+                        <button class="btn bg-[#00A63E] text-white px-[16%] roboto font-normal text-[16px] border-none rounded-[8px] call-btn">
+                            <i class="ri-phone-line"></i>Call
+                        </button>
+                     </div>
 
-                    <!-- buttons -->
-                    <div class="buttons mt-[24px] pb-[6px]">
-                        <button class="px-[60px] py-[12px] border-[1px] border-gray-400 rounded-[8px]"><i class="ri-file-copy-line"></i>Copy</button>
-                        <button class="px-[60px] py-[12px] bg-[#00A63E] text-white rounded-[8px]"><i class="ri-phone-fill"></i>Call</button>
-                    </div>
                 </div>
 
              </div>
-
-             <!-- history -->
-              <div class="history-container">
-                <div class="history bg-white h-full py-[30px]">
-                    <div class="title-section flex justify-between items-center w-[85%] mx-auto">
-                        <h1 class="roboto font-medium text-[20px]"><i class="ri-history-line text-[25px]"></i>  Call History</h1>
-                        <button class="px-[36px] py-[12px] rounded-[50px] bg-[#00A63E] text-white">Clear</button>
-                    </div>
+<!-- history sector -->
+             <div class="history-container bg-white lg:w-1/4 w-100 lg:h-300 rounded-xl shadow-xl">
+                <!-- histoty title -->
+                <div class="history flex items-center justify-between px-6 py-6">
+                    <h1 class="roboto font-medium text-xl"><i class="ri-history-line text-2xl mx-1 text-gray-500"></i>Call History</h1>
+                    <button class="px-8 py-3.5 bg-[#00A63E] text-white hindu font-medium text-lg rounded-[50px]">Clear</button>
                 </div>
-              </div>
-
+             </div>
 
          </div>
     </main>
+
+
+
+    <script src="./function.js"></script>
 </body>
 </html>
